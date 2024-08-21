@@ -5,6 +5,7 @@ pipeline {
         stage('cloning') {
             steps {
                 echo 'cloning an App from git, when code changes webhook makes a call to run pipeline'
+                echo 'trigger webhook when code has changed'
             }
         }
         stage('scan') {
