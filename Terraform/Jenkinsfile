@@ -10,9 +10,9 @@ pipeline{
         stage('Init'){
             steps{
                 echo'''
+                    cd Terraform
                     pwd
                     ls -ltr
-                    cd /Terraform
                     terraform init
                 '''
             }
