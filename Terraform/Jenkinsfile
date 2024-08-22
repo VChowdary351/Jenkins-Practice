@@ -2,14 +2,14 @@ pipeline{
     agent any
     options {
         ansiColor('xterm')
-        timeout(time: 1, unit: 'HOURS')
+        // timeout(time: 1, unit: 'HOURS')
         // disableConcurrentBuilds()
     }
 
     stages{
         stage('Init'){
             steps{
-                echo'''
+                sh'''
                     cd Terraform
                     pwd
                     ls -ltr
@@ -19,7 +19,7 @@ pipeline{
         }
         stage('plan'){
             steps{
-                echo'''
+                sh'''
                     pwd
                     ls -ltr
                     cd /Terraform
