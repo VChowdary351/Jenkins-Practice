@@ -10,6 +10,7 @@ terraform {
       key    = "sample-jenkins"
       region = "us-east-1"
       dynamodb_table = "remote-state-file-locking-roboshop"
+      encrypt = true
   }
 }
 provider "aws" {
