@@ -9,15 +9,17 @@ pipeline{
     stages{
         stage('Init'){
             steps{
+                 withAWS(credentials: 'aws-creds', region: 'us-east-1') {
                 sh'''
                     cd Terraform
                     ls -ltr
                     pwd
-                    terraform init -reconfigure
                     terraform init
                 '''
+                 }
             }
         }
+        
         stage('plan'){
             steps{
                 sh'''
