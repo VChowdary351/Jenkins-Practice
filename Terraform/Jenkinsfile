@@ -11,6 +11,7 @@ pipeline{
             steps{
                 sh'''
                     pwd
+                    cd Terraform
                     ls -ltr
                     terraform init
                 '''
