@@ -1,0 +1,27 @@
+pipeline{
+    agent any
+
+    stages{
+        stage('Init'){
+            steps{
+                echo'''
+                    pwd
+                    ls -ltr
+                    cd /Terraform
+                    terraform init
+                '''
+            }
+        }
+        stage('plan'){
+            steps{
+                echo'''
+                    pwd
+                    ls -ltr
+                    cd /Terraform
+                    terraform plan
+                '''
+            }
+        }
+    }
+
+}
