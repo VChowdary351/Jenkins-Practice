@@ -21,7 +21,7 @@ pipeline{
                 sh'''
                     pwd
                     ls -ltr
-                    
+                    cd Terraform
                     terraform plan
                 '''
             }
