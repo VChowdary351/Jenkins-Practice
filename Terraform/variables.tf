@@ -10,7 +10,7 @@ variable "instance_type" {
 
 variable "sg_name" {
     type = string
-    default = "allow-all"
+    default = "allow_all"
   
 }
 
@@ -22,7 +22,7 @@ variable "sg_cidr" {
 variable "tags" {
     type = map
     default = {
-        name = "work-station"
+        name = "Jenkins"
         Environment = "Dev"
         component = "Kubernetes"
         Project = "Roboshop"

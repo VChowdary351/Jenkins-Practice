@@ -1,4 +1,4 @@
-resource "aws_security_group" "workstation" {
+resource "aws_security_group" "allow_all" {
     name = var.sg_name
     description = "allowing all ports"
 
