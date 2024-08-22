@@ -13,6 +13,7 @@ pipeline{
                     pwd
                     cd Terraform
                     ls -ltr
+                    terraform init -reconfigure
                     terraform init
                 '''
             }
