@@ -10,9 +10,9 @@ pipeline{
         stage('Init'){
             steps{
                 sh'''
-                    pwd
                     cd Terraform
                     ls -ltr
+                    pwd
                     terraform init -reconfigure
                     terraform init
                 '''
@@ -21,9 +21,9 @@ pipeline{
         stage('plan'){
             steps{
                 sh'''
-                    pwd
+                    cd Terraformd
                     ls -ltr
-                    cd Terraform
+                    pwd
                     terraform plan
                 '''
             }
