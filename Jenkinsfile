@@ -1,5 +1,8 @@
 pipeline {
     agent any
+     options {
+        ansiColor('xterm')
+    }
     
     stages {
         stage('cloning') {
@@ -23,11 +26,7 @@ pipeline {
                 '''
             }
         }
-        stage('ImageScan') {
-            steps {
-                echo 'Image scanning with trivy'
-            }
-        }
+        
         stage('test') {
             steps {
                 echo 'Testing'
