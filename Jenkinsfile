@@ -45,9 +45,7 @@ pipeline {
                 //error 'deployment is failed'
             }
         }
-    }
-    stages {
-        stage('Params') {
+        stage('params') {
             steps {
                 echo "Hello ${params.PERSON}"
 
@@ -61,6 +59,7 @@ pipeline {
             }
         }
     }
+    
     post{
         always{
             echo 'i will always run whether job is success or not'
